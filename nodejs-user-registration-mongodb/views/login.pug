@@ -1,0 +1,81 @@
+extends layout
+
+block content
+
+  br
+  br
+  br
+  br
+  br
+
+  p(id='#films')
+  p(id='#films')
+  p(id='#films')
+  p(id='#films')
+  section.section.section-login
+    .container
+      .row
+        .col-md-4.col-md-offset-4
+          .card.card-body
+            h2
+              strong  Account Login
+            form
+              .form-group
+                .form-group
+                  label.control-label(for='inputEmail')
+                    strong Email address *
+                  input#inputEmail.form-control(type='email' aria-describedby='emailHelp' name='inputEmail' placeholder='Email')
+                  small#email_error.red-text.flag-error
+                .form-group
+                  label.control-label(for='inputEmail')
+                    strong Password *
+                  input#password.form-control(type='email' aria-describedby='password' name='password' placeholder='password' data-toggle='password')
+                  small#password_error.red-text.flag-error
+                .checkbox
+                  label
+                    input(type='checkbox')
+                    |  Remember me
+                .col-xs-12.col-sm-12.col-ms-12.align-center.wow.zoomIn.text-center
+                  button#submitForm.btn.btn-lg.btn-primary(name='sub') Login
+                p
+                p
+                  a(href='') forgot password?
+                p
+                  | Don&apos;t have an account yet?
+                  a(href='handyman.html') Sign up
+  p(id='#films')
+  p(id='#films')
+
+  script(src='js/jquery.js')
+  script(src='js/bootstrap.js')
+  script(src='bootstrap-show-password.min.js')
+  script(type='text/javascript').
+    $("#password").password('toggle');
+  script(type='text/javascript').
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+    } else {
+    document.getElementById("myBtn").style.display = "none";
+    }
+    }
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    $("form").submit(function (e) {
+    e.preventDefault();
+    var error = "";
+    if ($("inputEmail").val() == "") {
+    error + = "<p> Please enter your Email Address</p>";
+    }
+    $("#error").html(error);
+    if ($("password").val() == "") {
+    error + = "<p>enter password</p>";
+    }
+    if (error !="") {
+    $("#error").html(error);
+    }
+    });

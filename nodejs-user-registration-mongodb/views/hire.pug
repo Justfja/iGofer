@@ -1,0 +1,187 @@
+extends layout
+
+block content
+
+  br
+  br
+  br
+  br
+  br
+
+  p(id='#films')
+  p(id='#films')
+  p(id='#films')
+    .card.card-body
+      .container
+        h1(style='text-align: center;')
+          strong Hire
+        p
+        p
+        p
+        p
+        p
+        p
+        form
+          .form-group.row
+            .row
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label(for='inputFullname')
+                    strong First Name *
+                  input#inputFirstname.form-control(type='name' aria-describedby='fullName' name='inputFullname' placeholder='First name')
+                  small#fullname_error.red-text.flag-error
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label(for='inputFullname')
+                    strong Surname *
+                  input#inputSurname.form-control(type='name' aria-describedby='Esurname' name='surname' placeholder='Surname')
+                  small#fullname_error.red-text.flag-error
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label.control-label(for='inputEmail')
+                    strong Email address *
+                  input#inputEmail.form-control(type='email' aria-describedby='emailHelp' name='inputEmail' placeholder='Enter email address')
+                  small#email_error.red-text.flag-error
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label.control-label(for='inputPhoneNumber')
+                    strong Phone number *
+                  input#phoneNumber.form-control(type='tel' aria-describedby='phoneNo' name='phoneNo' placeholder='Phone number')
+                  small#phoneNumber_error.red-text.flag-error
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label.control-label(for='inputEmail')
+                    strong Time *
+                  input#password.form-control(type='time' aria-describedby='password' name='time' placeholder='Time')
+                  small#time_error.red-text.flag-error
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label.control-label(for='inputEmail')
+                    strong  Date *
+                  input#date.form-control(type='date' aria-describedby='password' name='date' placeholder='date')
+                  small#date_error.red-text.flag-error
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label.control-label(for='inputEmail')
+                    strong  Location *
+                  input#confirmPassword.form-control(type='' aria-describedby='password' name='rePassword' placeholder='Location')
+                  small#Location_error.red-text.flag-error
+              .col-xs-6.col-sm-6.col-ms-6
+                .form-group
+                  label.control-label(for='inputEmail')
+                    strong  Service needed *
+                  input#confirmPassword.form-control(type='service' aria-describedby='servicNeeded' name='service' placeholder='Service needed')
+                  small#service_error.red-text.flag-error
+              .container
+                .form-group
+                  label(for='inputMessage')
+                    strong Brief description of work *
+                  textarea#inputMessage.form-control(name='inputMessage' rows='6')
+                  small#message_error.red-text.flag-error
+                .checkbox
+                  label
+                    input(type='checkbox')
+                    |  I agree with the
+                    a(href='' target='_blank')  Terms and conditions.
+                button#submitForm.btn.btn-lg.btn-primary(name='submitHire') Submit
+                p
+                form
+                  .form-group
+                    label(for='exampleFormControlFile1') Got a photo of what you want to fix? or what you want your work to look like?
+                    input#exampleFormControlFile1.form-control-file(type='file')
+                p
+    hr
+  p(id='#films')
+  p(id='#films')
+    button#myBtn(onclick='topFunction()' title='Go to top')
+      i.fas.fa-angle-double-up.fa-2x
+    #footer
+      .footer-top
+        .container
+          .row
+            .col-lg-3.col-md-6.footer-info
+              h3.logo
+                img.logo(src='img/logo.jpg' alt='logo')
+              .col-lg-3.col-md-6.footer-links
+              ul
+                li
+                  i.menu-bottom
+                  a(href='#') How it works
+                li
+                  i.menu-bottom
+                  a(href='#') Services
+                li
+                  i.imenu-bottom
+                  a(href='#') About Us
+                li
+                  i.menu-bottom
+                  a(href='#') FAQs
+                li
+                  i.menu-bottom
+                  a(href='#') Contact Us
+                li
+                  i.menu-bottom
+                  a(href='#') Terms and conditions
+            .col-lg-3.col-md-6.footer-contact
+              h4
+                strong Follow us
+              a(href='https://facebook.com' target='_blank')
+                i.fab.fa-facebook.fa-3x
+              a(href='https://twitter.com' target='_blank')
+                i.fab.fa-twitter.fa-3x
+              a(href='https://instagram.com' target='_blank')
+                i.fab.fa-instagram.fa-3x
+              a(href='https://linkedin.com' target='_blank')
+                i.fab.fa-linkedin.fa-3x
+            .col-lg-3.col-md-6.footer-contact-no
+              h3
+                strong Location
+              p
+                | 2, Norman Williams Street
+                br
+                | off Awolowo Road, Ikoyi.
+            .col-lg-3.col-md-6.footer-contact-no
+              h3
+                strong Contact
+              p
+                | +234-8168847243
+                br
+                |  hello@igofer.com.ng
+                br
+                |           24/7 Customer service
+      .bottom
+        p &copy; igofer 2018 | All rights reserved
+
+  script(src='js/jquery.js')
+  script(src='js/bootstrap.js')
+  script(type='text/javascript').
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+    } else {
+    document.getElementById("myBtn").style.display = "none";
+    }
+    }
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+    $("form").submit(function (e) {
+    e.preventDefault();
+    var error = "";
+    if ($("inputEmail").val() == "") {
+    error + = "<p> Please enter your Email Address</p>";
+    }
+    $("#error").html(error);
+    if ($("inputFullname").val() == "") {
+    error + = "<p> Please enter your Full name</p>";
+    }
+    $("#error").html(error);
+    if ($("inputMessage").val() == "") {
+    error + = "<p>The Message field is required</p>";
+    }
+    if (error !="") {
+    $("#error").html(error);
+    }
+    });

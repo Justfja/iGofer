@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='x-ua-compatible' content='ie=edge')
+  title igofer
+  meta(name='viewport' content='width=device-width, initial-scale=1' shrink-to-fit='no')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/index.css')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/style.css')
+  link(rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.1/css/all.css' integrity='sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz' crossorigin='anonymous')
+  link(rel='stylesheet' type='text/css' href='stylesheets/fontawesome.min.css')
+  link(rel='stylesheet' type='text/css' media='screen and (min-width: 550px)' href='index-medium.css')
+  link(rel='stylesheet' type='text/css' media='screen and (min-width: 700px)' href='index-large.css')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/bootstrap.css')
+
+header.fixed-top.scroll-change
+  nav#top.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href='/')
+      img.logo(src='./img/logo.jpg' alt='logo')
+    button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href='#')
+            strong How it works
+            span.sr-only (current)
+        li.nav-item
+          a.nav-link(href='/contact')
+            strong Contact Us
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            strong Services
+          .dropdown-menu(aria-labelledby='navbarDropdown')
+            a.dropdown-item(href='#') Handyman services
+            a.dropdown-item(href='#') Food services
+            a.dropdown-item(href='#') Logistics
+            a.dropdown-item(href='#') Errands
+            a.dropdown-item(href='#') Academics
+            a.dropdown-item(href='#') Event management
+            a.dropdown-item(href='#') Virtual Assistance
+        li.nav-item.dropdown
+          a#navbarDropdown.nav-link.dropdown-toggle(href='#' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            strong Join
+          .dropdown-menu(aria-labelledby='navbarDropdown')
+            a.dropdown-item(href='/handyman') As Service provider
+            a.dropdown-item(href='/member') As Client
+        li.nav-item
+          a.nav-link(href='/login')
+            strong Login
+        li.nav-item
+          a.nav-link(href='/hire')
+            strong Hire
+      form.form-inline.my-2.my-lg-0
+        input.form-control.mr-sm-2(type='search' placeholder='Looking for' aria-label='Search')
+        button.btn.btn-outline-primary.my-2.my-sm-0(type='submit') Search
+
+
+body
+  .container
+  block content

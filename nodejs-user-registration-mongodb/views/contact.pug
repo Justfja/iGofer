@@ -1,0 +1,44 @@
+extends layout
+
+block content
+  br
+  br
+  br
+  br
+  br
+  br
+
+
+  p(id='#films')
+  p(id='#films')
+  p(id='#films')
+  p(id='#films')
+  p(id='#films')
+    .container
+      h2(style='text-align: center;')
+        strong  Leave a Message
+      form
+        .form-group
+          label(for='inputFullname')
+            strong Full Name *
+          input#inputFullname.form-control(type='name' aria-describedby='emailFullname' name='inputFullname' placeholder='Enter full-name')
+          small#fullname_error.red-text.flag-error
+        .form-group
+          label.control-label(for='inputEmail')
+            strong Email address *
+          input#inputEmail.form-control(type='email' aria-describedby='emailHelp' name='inputEmail' placeholder='Enter email address')
+          small#email_error.red-text.flag-error
+        .form-group
+          label(for='inputMessage')
+            strong Subject *
+          textarea#inputSubject.form-control(name='inputSubject' rows='1')
+          small#subject_error.red-text.flag-error
+        .form-group
+          label(for='inputMessage')
+            strong Message *
+          textarea#inputMessage.form-control(name='inputMessage' rows='6')
+          small#message_error.red-text.flag-error
+        button#submitForm.btn.btn-lg.btn-primary(name='sub') Send
+        hr
+  p(id='#films')
+  p(id='#films') &nbsp;
